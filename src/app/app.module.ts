@@ -9,7 +9,7 @@ import { AppComponent } from './containers/app/app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule
   ],
   providers: [],
