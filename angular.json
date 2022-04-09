@@ -30,7 +30,8 @@
               "src/favicon.ico",
               "src/assets",
               "src/assets/images",
-              "src/assets/images/icons"
+              "src/assets/images/icons",
+              "src/assets/images/certifications/l2c"
             ],
             "styles": ["src/styles.scss", "src/variables.scss"],
             "scripts": []
@@ -93,7 +94,8 @@
               "src/favicon.ico",
               "src/assets",
               "src/assets/images",
-              "src/assets/images/icons"
+              "src/assets/images/icons",
+              "src/assets/images/certifications/l2c"
             ],
             "styles": ["src/styles.scss", "src/variables.scss"],
             "scripts": []

@@ -19,9 +19,9 @@ export const ROUTES: Routes = [
   },
   {
     path: 'experience',
-    redirectTo: 'underconstruction',
-    // loadChildren: () =>
-    //   import('./experience/experience.module').then((m) => m.ExperienceModule),
+    // redirectTo: 'underconstruction',
+    loadChildren: () =>
+      import('./experience/experience.module').then((m) => m.ExperienceModule),
   },
   {
     path: 'projects',
