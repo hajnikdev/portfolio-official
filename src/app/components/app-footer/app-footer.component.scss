@@ -1,0 +1,81 @@
+:host {
+  footer.default {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+
+  }
+
+  footer:not(.default) {
+    background-color: transparent;
+
+    .container {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  footer {
+    background-color: #25262a;
+
+    .container {
+      width: calc(100% - 2rem);
+      max-width: 1440px;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 1rem 2rem;
+      margin: auto;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .sign {
+          user-select: none;
+          pointer-events: none;
+          width: 200px;
+        }
+
+        p {
+          margin: 0.5rem 0;
+        }
+
+        .socials {
+          display: flex;
+          gap: 0.75rem;
+          margin-bottom: 0.5rem;
+
+          a.social-network {
+            user-select: none;
+            opacity: 0.7;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 0.5rem;
+        text-align: right;
+
+        a {
+          &:last-child {
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              filter: sepia(1) hue-rotate(88deg) saturate(1) brightness(0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}

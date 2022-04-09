@@ -1,0 +1,22 @@
+:host {
+  width: 100%;
+
+  article {
+    width: 100%;
+    max-width: 740px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 1rem;
+    margin: auto;
+
+    h1 {
+      margin: 0;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}

@@ -28,12 +28,11 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/images",
+              "src/assets/images/icons"
             ],
-            "styles": [
-              "src/styles.scss",
-              "src/variables.scss"
-            ],
+            "styles": ["src/styles.scss", "src/variables.scss"],
             "scripts": []
           },
           "configurations": {
@@ -59,8 +58,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "8kb"
                 }
               ]
             }
@@ -92,12 +91,11 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/images",
+              "src/assets/images/icons"
             ],
-            "styles": [
-              "src/styles.scss",
-              "src/variables.scss"
-            ],
+            "styles": ["src/styles.scss", "src/variables.scss"],
             "scripts": []
           }
         },
@@ -110,9 +108,7 @@
               "e2e/tsconfig.json",
               "tsconfig.server.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -166,9 +162,7 @@
           "options": {
             "browserTarget": "portfolio-official:build:production",
             "serverTarget": "portfolio-official:server:production",
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {}

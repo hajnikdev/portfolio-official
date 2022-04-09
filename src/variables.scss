@@ -3,4 +3,16 @@
   --font_primary: "Blinker", sans-serif;
   --font_secondary: "Red Hat Display", sans-serif;
   --font_terciary: "Nunito", sans-serif;
+
+  // Paddings
+  --padding_default: 1rem;
+
+  // Margins
+  --margin_default: 1rem;
+}
+
+@media screen and (min-width: 425px){
+  :root {
+    --padding_default: 1.2rem
+  }
 }

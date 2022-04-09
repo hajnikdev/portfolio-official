@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  // Variables
+  menuVisibility: boolean = false;
+
+  // Class methods
+  onMenuToggle() {
+    this.menuVisibility = !this.menuVisibility
+  }
 }

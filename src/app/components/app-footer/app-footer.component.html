@@ -1,0 +1,65 @@
+<footer [ngClass]="{'default': type === 'default'}">
+  <div class="container">
+    <div>
+      <img
+        class="sign"
+        src="assets/images/icons/icon-hajnik-sign.png"
+        alt="Maroš Hajník"
+      />
+      <p>Programátor či moderný ITčkár s výnimočným prístupom</p>
+      <div class="socials">
+        <a
+          href="https://www.linkedin.com/in/hajnikmaros"
+          target="_blank"
+          class="social-network"
+        >
+          <img
+            src="assets/images/icons/icon-linkedin.png"
+            alt="linkedin link"
+          />
+        </a>
+        <a
+          href="https://github.com/hajnikdev"
+          target="_blank"
+          class="social-network"
+        >
+          <img src="assets/images/icons/icon-github.png" alt="github link" />
+        </a>
+        <a
+          href="https://www.facebook.com/marosmosek/"
+          target="_blank"
+          class="social-network"
+        >
+          <img
+            src="assets/images/icons/icon-facebook.png"
+            alt="facebook link"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/marosmosek/"
+          target="_blank"
+          class="social-network"
+        >
+          <img
+            src="assets/images/icons/icon-instagram.png"
+            alt="instagram link"
+          />
+        </a>
+      </div>
+      <p>© 2021 Maroš Hajník. All rights reserved.</p>
+    </div>
+    <nav *ngIf="type === 'default'">
+      <a routerLink="home">Domov</a>
+      <a routerLink="skills">Znalosti</a>
+      <a routerLink="experience"> Pracovné Skúsenosti </a>
+      <a routerLink="projects">Projekty</a>
+      <a routerLink="contact">Kontakt</a>
+      <a href="/">
+        <img
+          src="assets/images/icons/icon-scroll-to-top.png"
+          alt="Maroš Hajník"
+        />
+      </a>
+    </nav>
+  </div>
+</footer>

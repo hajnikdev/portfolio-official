@@ -1,0 +1,344 @@
+:host {
+  width: 100%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    .hero-wrapper {
+      box-shadow: 0 1rem 1rem 0rem #00000026;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      max-width: 1440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: var(--padding_default) var(--padding_default) 0;
+      overflow: hidden;
+
+      @media screen and (min-width: 425px) {
+        width: calc(100% - 2rem);
+        padding: 2rem 1rem 0;
+        margin: 0 auto;
+
+        @media screen and (min-width: 768px) {
+          height: calc(100vh - 6.5rem);
+          min-height: 640px;
+          max-height: 991px;
+          align-items: flex-start;
+          padding: max(5%, 10rem) 1rem 0;
+        }
+      }
+
+      .chips {
+        display: none;
+        order: 3;
+        white-space: nowrap;
+        gap: 0.5rem;
+        margin-bottom: var(--margin_default);
+
+        @media screen and (min-width: 375px) {
+          display: flex;
+          @media screen and (min-width: 425px) {
+            margin-bottom: 2rem;
+
+            @media screen and (min-width: 768px) {
+              order: unset;
+            }
+          }
+        }
+
+
+        app-chip {
+          @media screen and (min-width: 425px) {
+            min-width: 120px;
+          }
+        }
+      }
+
+      > h1 {
+        order: 1;
+        text-align: center;
+        margin: 0;
+
+        @media screen and (min-width: 768px) {
+          order: unset;
+        }
+      }
+
+      > p {
+        order: 2;
+        text-align: center;
+        max-width: 21rem;
+
+        @media screen and (min-width: 768px) {
+          order: unset;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        > h1,
+        > p {
+          text-align: left;
+        }
+      }
+    }
+
+    .hero__elipse {
+      width: 100%;
+      max-width: 400px;
+      user-select: none;
+      pointer-events: none;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(126.87deg, #28292d 13.83%, #2d2e32 77.74%);
+      box-shadow: -5px -5px 10px 5px rgb(0 0 0 / 5%);
+      order: 4;
+
+      @media screen and (min-width: 768px) {
+        position: absolute;
+        right: 5%;
+        bottom: 0;
+        width: 40rem;
+        max-width: 500px;
+        order: unset;
+
+        @media screen and (min-width: 991px) {
+          position: absolute;
+          right: 5%;
+          bottom: 0;
+          width: 40rem;
+          max-width: 768px;
+        }
+      }
+
+      > img {
+        width: 85%;
+      }
+
+      .elipse {
+        &__small {
+          position: relative;
+          width: 2%;
+          min-width: 1rem;
+          height: 2%;
+          min-height: 1rem;
+          border-radius: 50%;
+
+          &--green,
+          &--grey {
+            position: absolute;
+          }
+
+          &--green {
+            &:nth-child(1) {
+              bottom: 45%;
+              left: 3%;
+              background: #6df7a5;
+              box-shadow: inset -1px 3px 3px rgba(255, 255, 255, 0.3),
+                inset 1px -2px 0px rgba(0, 0, 0, 0.25);
+            }
+
+            &:nth-child(2) {
+              bottom: 55%;
+              right: 0%;
+              background: #6df7a5;
+              box-shadow: inset 1px 2px 3px rgba(255, 255, 255, 0.3),
+                inset -1px -2px 2px rgba(0, 0, 0, 0.25);
+            }
+          }
+
+          &--grey {
+            &:nth-child(3) {
+              top: 25%;
+              left: 10%;
+              width: 2.5%;
+              min-width: 1.5rem;
+              height: 2.5%;
+              min-height: 1.5rem;
+              background: #32343a;
+              box-shadow: inset -1px 1px 2px -2px rgba(255, 255, 255, 0.25),
+                inset 1px -2px 3px rgba(0, 0, 0, 0.25);
+            }
+
+            &:nth-child(4) {
+              top: 15%;
+              right: 10%;
+              width: 2.5%;
+              min-width: 1.5rem;
+              height: 2.5%;
+              min-height: 1.5rem;
+              background: #25262a;
+              box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.15),
+                inset 2px 3px 5px -2px rgba(255, 255, 255, 0.15),
+                inset 0px -2px 15px 3px rgba(0, 0, 0, 0.15);
+            }
+          }
+        }
+
+        &__big {
+          position: relative;
+          &__container {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+            &--react {
+              bottom: 1%;
+              left: 25%;
+              width: 20%;
+              min-width: 6rem;
+              height: 20%;
+              min-height: 6rem;
+              background: #2f3033;
+              box-shadow: inset -5px 5px 20px -10px rgba(255, 255, 255, 0.4),
+                inset 5px -10px 10px 5px rgba(0, 0, 0, 0.25),
+                -13px 20px 20px 1px #00000026;
+
+              img {
+                width: 60%;
+              }
+            }
+
+            &--javascript {
+              bottom: 8%;
+              right: 25%;
+              width: 22%;
+              min-width: 6.5rem;
+              height: 22%;
+              min-height: 6.5rem;
+              background: #25262a;
+              box-shadow: inset -2px 15px 15px rgba(255, 255, 255, 0.2),
+                inset 2px -25px 30px rgba(0, 0, 0, 0.4),
+                -10px 30px 30px rgba(0, 0, 0, 0.3);
+
+              img {
+                width: 60%;
+              }
+            }
+
+            &--angular {
+              bottom: 25%;
+              right: 4%;
+              width: 18%;
+              min-width: 5.5rem;
+              height: 18%;
+              min-height: 5.5rem;
+              background: #2f3033;
+              box-shadow: inset 2px 10px 10px -10px rgba(255, 255, 255, 0.3),
+                inset -2px -10px 15px rgba(0, 0, 0, 0.25),
+                -25px 25px 70px rgba(0, 0, 0, 0.55);
+
+              img {
+                width: 60%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    article {
+      &.about {
+        background-color: #25262a;
+        width: 100%;
+
+        .container {
+          width: 100%;
+          max-width: 1440px;
+          display: flex;
+          flex-direction: column-reverse;
+          padding: var(--padding_default);
+          margin: auto;
+
+          @media screen and (min-width: 425px) {
+            width: calc(100% - 2rem);
+            padding: 3rem 1rem;
+            margin: auto;
+
+            @media screen and (min-width: 768px) {
+              padding: 9.5rem 1rem;
+              flex-direction: row;
+              gap: 1rem;
+            }
+          }
+
+          ul,
+          .introduction {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (min-width: 768px) {
+              width: 50%;
+            }
+          }
+
+          ul {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+
+            @media screen and (min-width: 768px) {
+              padding: 0 3.4rem;
+            }
+
+            li {
+              background: #2d2e32;
+              min-height: 145px;
+              padding: 1.25rem;
+              transform: translateY(0rem);
+              transition: box-shadow 0.4s ease-in-out,
+                transform 0.4s ease-in-out;
+
+              &:hover {
+                transform: translateY(-0.25rem);
+                box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.16);
+              }
+
+              .title-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                h3 {
+                  margin: 0;
+                  letter-spacing: 0.1em;
+                }
+              }
+            }
+          }
+
+          .introduction {
+            padding: var(--padding_default);
+            margin-bottom: var(--margin_default);
+
+            @media screen and (min-width: 425px) {
+              padding: 0 2rem;
+              @media screen and (min-width: 768px) {
+                padding: 0 6rem;
+                margin-bottom: 0;
+              }
+            }
+
+            p {
+              margin: 0;
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+}

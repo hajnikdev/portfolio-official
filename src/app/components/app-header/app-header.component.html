@@ -1,0 +1,59 @@
+<header class="header">
+  <div class="header__container">
+    <a class="header__logo" routerLink="/"> <span>Maroš</span> Hajník </a>
+    <nav [ngClass]="{ shown: isMenuVisible }">
+      <button type="menu" class="header__menu" (click)="toggleNavigationMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <a
+        routerLink="home"
+        routerLinkActive="active"
+        (click)="toggleNavigationMenu()"
+        >Domov</a
+      >
+      <a
+        routerLink="skills"
+        routerLinkActive="active"
+        (click)="toggleNavigationMenu()"
+        >Znalosti</a
+      >
+      <a
+        routerLink="experience"
+        routerLinkActive="active"
+        (click)="toggleNavigationMenu()"
+      >
+        Pracovné Skúsenosti
+      </a>
+      <a
+        routerLink="projects"
+        routerLinkActive="active"
+        (click)="toggleNavigationMenu()"
+        >Projekty</a
+      >
+      <a
+        routerLink="contact"
+        routerLinkActive="active"
+        (click)="toggleNavigationMenu()"
+        >Kontakt</a
+      >
+      <span style="flex: 1"></span>
+      <app-footer [type]="'simple'"></app-footer>
+    </nav>
+    <button type="button" class="header__contact" (click)="contactMe()">
+      <svg
+        width="23"
+        height="17"
+        viewBox="0 0 23 17"
+        fill="#5BBF85"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21.7184 4.11689C22.1848 3.82113 22.3232 3.20326 22.0274 2.73685C21.7316 2.27043 21.1138 2.1321 20.6474 2.42786L21.7184 4.11689ZM11.4862 9.42133L10.9507 10.2658L11.4862 10.6054L12.0218 10.2658L11.4862 9.42133ZM2.32508 2.42786C1.85867 2.1321 1.2408 2.27043 0.945036 2.73685C0.64927 3.20326 0.787606 3.82113 1.25402 4.11689L2.32508 2.42786ZM1.78979 1.66785L1.78979 0.667847C1.23751 0.667848 0.789792 1.11556 0.789788 1.66784L1.78979 1.66785ZM21.1829 1.66782H22.1829C22.1829 1.4026 22.0775 1.14825 21.89 0.960709C21.7025 0.773172 21.4481 0.667816 21.1829 0.667816L21.1829 1.66782ZM21.1829 15.7226V16.7226C21.7352 16.7226 22.1829 16.2748 22.1829 15.7226H21.1829ZM1.78967 15.7226L0.789667 15.7226C0.789665 15.9878 0.895021 16.2421 1.08256 16.4297C1.27009 16.6172 1.52445 16.7226 1.78967 16.7226V15.7226ZM20.6474 2.42786L10.9507 8.57681L12.0218 10.2658L21.7184 4.11689L20.6474 2.42786ZM12.0218 8.57681L2.32508 2.42786L1.25402 4.11689L10.9507 10.2658L12.0218 8.57681ZM1.78979 2.66785L21.1829 2.66782L21.1829 0.667816L1.78979 0.667847L1.78979 2.66785ZM20.1829 1.66782V15.7226H22.1829V1.66782H20.1829ZM21.1829 14.7226H1.78967V16.7226H21.1829V14.7226ZM2.78967 15.7226L2.78979 1.66786L0.789788 1.66784L0.789667 15.7226L2.78967 15.7226Z"
+        />
+      </svg>
+    </button>
+    <button type="menu" class="header__menu" (click)="toggleNavigationMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
