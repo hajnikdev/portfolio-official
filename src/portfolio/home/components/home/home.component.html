@@ -2,22 +2,22 @@
   <div class="hero-wrapper">
     <div class="hero">
       <div class="chips">
-        <app-chip title="Front-End Developer" [value]="100"></app-chip>
-        <app-chip title="Designer" [value]="80"></app-chip>
-        <app-chip title="Back-End Developer" [value]="60"></app-chip>
+        <app-chip title="{{'Home.Hero.Chips.Frontend' | translate}}" [value]="100"></app-chip>
+        <app-chip title="{{'Home.Hero.Chips.Designer' | translate}}" [value]="80"></app-chip>
+        <app-chip title="{{'Home.Hero.Chips.Backend' | translate}}" [value]="60"></app-chip>
       </div>
-      <h1>Talk is cheap.<br />Show me the code</h1>
-      <p>I design and code beautifully simple things, and I love what I do.</p>
+      <h1>{{'Home.Hero.Headline.FirstSentence' | translate}}<br />{{'Home.Hero.Headline.SecondSentence' | translate}}</h1>
+      <p>{{'Home.Hero.Subheadline' | translate}}</p>
       <div style="flex: 1;"></div>
       <div class="odometers">
         <div class="odometer">
-          <app-odometer [endValue]="3"></app-odometer>
-          <span>Years <br> Experience</span>
+          <app-odometer [endValue]="4"></app-odometer>
+          <span>{{'Home.Hero.Odometer.First.FirstSentence' | translate}} <br> {{'Home.Hero.Odometer.First.SecondSentence' | translate}}</span>
         </div>
         <div class="odometer">
           <app-odometer [endValue]="15"></app-odometer>
           <i>+</i>
-          <span>Projects <br> Completed</span>
+          <span>{{'Home.Hero.Odometer.Second.FirstSentence' | translate}} <br> {{'Home.Hero.Odometer.Second.SecondSentence' | translate}}</span>
         </div>
       </div>
 

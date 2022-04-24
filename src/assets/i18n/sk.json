@@ -1,3 +1,38 @@
 {
-  "TEST": "jazyk"
+  "App": {
+    "Header": {
+      "Navigation": {
+        "Home": "Domov",
+        "Skills": "Znalosti",
+        "WorkExperience": "Pracovné Skúsenosti",
+        "Projects": "Projekty",
+        "Blog": "Blog",
+        "Contact": "Kontakt"
+      }
+    }
+  },
+  "Home": {
+    "Hero": {
+      "Chips": {
+        "Frontend": "Front-End Vývojár",
+        "Designer": "Webový Dizajner",
+        "Backend": "Back-End Vývojár"
+      },
+      "Headline": {
+        "FirstSentence": "Nestrácajme čas.",
+        "SecondSentence": "Ukáž mi kód."
+      },
+      "Subheadline": "Navrhujem a programujem krásne jednoduché veci a milujem to, čo robím.",
+      "Odometer": {
+        "First": {
+          "FirstSentence": "Roky",
+          "SecondSentence": "Skúseností"
+        },
+        "Second": {
+          "FirstSentence": "Dokončených",
+          "SecondSentence": "Projektov"
+        }
+      }
+    }
+  }
 }

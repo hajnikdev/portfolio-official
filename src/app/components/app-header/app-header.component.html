@@ -1,6 +1,8 @@
 <header class="header">
   <div class="header__container">
-    <a class="header__logo" [routerLink]="'/' | localize"> <span>Maroš</span> Hajník </a>
+    <a class="header__logo" [routerLink]="'/' | localize">
+      <span>Maroš</span> Hajník
+    </a>
     <nav [ngClass]="{ shown: isMenuVisible }">
       <button type="menu" class="header__menu" (click)="toggleNavigationMenu()">
         <span></span><span></span><span></span>
@@ -9,43 +11,53 @@
         [routerLink]="'/home' | localize"
         routerLinkActive="active"
         (click)="toggleNavigationMenu()"
-        >Domov</a
+        >{{ "App.Header.Navigation.Home" | translate }}</a
       >
       <a
         [routerLink]="'/skills' | localize"
         routerLinkActive="active"
         (click)="toggleNavigationMenu()"
-        >Znalosti</a
+        >{{ "App.Header.Navigation.Skills" | translate }}</a
       >
       <a
         [routerLink]="'/experience' | localize"
         routerLinkActive="active"
         (click)="toggleNavigationMenu()"
       >
-        Pracovné Skúsenosti
+        {{ "App.Header.Navigation.WorkExperience" | translate }}
       </a>
       <a
         [routerLink]="'/projects' | localize"
         routerLinkActive="active"
         (click)="toggleNavigationMenu()"
-        >Projekty</a
+        >{{ "App.Header.Navigation.Projects" | translate }}</a
+      >
+      <a
+        [routerLink]="'/blog' | localize"
+        routerLinkActive="active"
+        (click)="toggleNavigationMenu()"
+        >{{ "App.Header.Navigation.Blog" | translate }}</a
       >
       <a
         [routerLink]="'/contact' | localize"
         routerLinkActive="active"
         (click)="toggleNavigationMenu()"
-        >Kontakt</a
-      >
-      <a
-        *ngFor="let locale of locales"
-        routerLink="/{{locale}}/{{currentUrl}}"
-        routerLinkActive="active"
-        >{{locale}}</a
+        >{{ "App.Header.Navigation.Contact" | translate }}</a
       >
       <span style="flex: 1"></span>
       <app-footer [type]="'simple'"></app-footer>
     </nav>
-    <button type="button" class="header__contact" [routerLink]="'/contact' | localize">
+    <a
+      *ngFor="let locale of locales"
+      routerLink="/{{ locale }}/{{ currentUrl }}"
+      routerLinkActive="active"
+      >{{ locale }}</a
+    >
+    <button
+      type="button"
+      class="header__contact"
+      [routerLink]="'/contact' | localize"
+    >
       <svg
         width="23"
         height="17"

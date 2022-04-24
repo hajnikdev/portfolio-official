@@ -8,6 +8,11 @@ import { PageUnderConstructionComponent } from './components/page-under-construc
 
 export const ROUTES: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home',
+  },
+  {
     path: 'home',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
