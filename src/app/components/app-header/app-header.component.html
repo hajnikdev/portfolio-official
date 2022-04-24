@@ -1,45 +1,51 @@
 <header class="header">
   <div class="header__container">
-    <a class="header__logo" routerLink="/"> <span>Maroš</span> Hajník </a>
+    <a class="header__logo" [routerLink]="'/' | localize"> <span>Maroš</span> Hajník </a>
     <nav [ngClass]="{ shown: isMenuVisible }">
       <button type="menu" class="header__menu" (click)="toggleNavigationMenu()">
         <span></span><span></span><span></span>
       </button>
       <a
-        routerLink="home"
+        [routerLink]="'/home' | localize"
         routerLinkActive="active"
         (click)="toggleNavigationMenu()"
         >Domov</a
       >
       <a
-        routerLink="skills"
+        [routerLink]="'/skills' | localize"
         routerLinkActive="active"
         (click)="toggleNavigationMenu()"
         >Znalosti</a
       >
       <a
-        routerLink="experience"
+        [routerLink]="'/experience' | localize"
         routerLinkActive="active"
         (click)="toggleNavigationMenu()"
       >
         Pracovné Skúsenosti
       </a>
       <a
-        routerLink="projects"
+        [routerLink]="'/projects' | localize"
         routerLinkActive="active"
         (click)="toggleNavigationMenu()"
         >Projekty</a
       >
       <a
-        routerLink="contact"
+        [routerLink]="'/contact' | localize"
         routerLinkActive="active"
         (click)="toggleNavigationMenu()"
         >Kontakt</a
       >
+      <a
+        *ngFor="let locale of locales"
+        routerLink="/{{locale}}/{{currentUrl}}"
+        routerLinkActive="active"
+        >{{locale}}</a
+      >
       <span style="flex: 1"></span>
       <app-footer [type]="'simple'"></app-footer>
     </nav>
-    <button type="button" class="header__contact" (click)="contactMe()">
+    <button type="button" class="header__contact" [routerLink]="'/contact' | localize">
       <svg
         width="23"
         height="17"

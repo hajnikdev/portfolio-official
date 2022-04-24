@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 // Components
 import { PageNotFoundComponent } from '../portfolio/components/page-not-found/page-not-found.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',

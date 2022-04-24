@@ -4,8 +4,13 @@ import {
   Output,
   ChangeDetectionStrategy,
   HostListener,
+  OnInit,
 } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
+// Translate service
+import { LocalizeRouterService, LocalizeRouterPipe } from '@gilsdav/ngx-translate-router';
 
 @Component({
   selector: 'app-header',
@@ -13,20 +18,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./app-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppHeaderComponent {
+export class AppHeaderComponent implements OnInit{
   @Output() toggleMenu = new EventEmitter<any>();
 
+  locales = this.localizeRouterService.parser.locales;
+  currentUrl = '';
   isMenuVisible: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,  private localizeRouterService: LocalizeRouterService,) {}
+
+  ngOnInit(): void {
+    this.setCurrentUrl();
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+    ).subscribe(() => {
+      this.setCurrentUrl();
+    });
+  }
+
+  private setCurrentUrl(): void {
+    this.currentUrl = this.router.url
+      .replace('/' + this.localizeRouterService.parser.currentLang, '')
+      .split('?')[0];
+  }
 
   toggleNavigationMenu() {
     this.isMenuVisible = !this.isMenuVisible;
     this.toggleMenu.emit();
-  }
-
-  contactMe() {
-    this.router.navigate(['underconstruction']);
   }
 
   @HostListener('document:keydown.escape', ['$event'])
