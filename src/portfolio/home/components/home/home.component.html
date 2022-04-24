@@ -8,6 +8,19 @@
       </div>
       <h1>Talk is cheap.<br />Show me the code</h1>
       <p>I design and code beautifully simple things, and I love what I do.</p>
+      <div style="flex: 1;"></div>
+      <div class="odometers">
+        <div class="odometer">
+          <app-odometer [endValue]="3"></app-odometer>
+          <span>Years <br> Experience</span>
+        </div>
+        <div class="odometer">
+          <app-odometer [endValue]="15"></app-odometer>
+          <i>+</i>
+          <span>Projects <br> Completed</span>
+        </div>
+      </div>
+
       <span class="hero__elipse">
         <span class="elipse__small elipse__small--green"></span>
         <span class="elipse__small elipse__small--green"></span>

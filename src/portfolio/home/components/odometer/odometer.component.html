@@ -1,0 +1,44 @@
+<div class="odometer-wrapper">
+  <div
+    class="odometer-roller"
+    *ngFor="let valx of valueArrayOptions; let forIndex = index"
+  >
+    <div style="opacity: 0">0</div>
+    <ng-container *ngIf="valueReady; else notReady">
+      <div
+        class="odometer-digit-roll"
+        [ngStyle]="{
+          top: valx.index * -100 + '%',
+          'transition-duration':
+            forIndex === 0
+              ? 2000 - valx.index * 100 > 1150
+                ? 2000 - valx.index * 100 + 'ms'
+                : 1150 + 'ms'
+              : 1600 -
+                (1600 / valueArrayOptions.length) * (1 - forIndex * 0.3) +
+                'ms',
+          'transition-timing-function':
+            forIndex === 0
+              ? 'cubic-bezier(0, 0, 0.19, 0.99)'
+              : 'cubic-bezier(0, 0, 0.14, 0.55)'
+        }"
+      >
+        <div class="odometer-digit" *ngFor="let valy of valx.digits">
+          <span>{{ valy }}</span>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #notReady>
+      <div
+        class="odometer-digit-roll"
+        [ngStyle]="{
+          top: 0 + '%'
+        }"
+      >
+        <div class="odometer-digit" *ngFor="let valy of valx.digits">
+          <span>{{ valy }}</span>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>

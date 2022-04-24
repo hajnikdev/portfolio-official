@@ -86,6 +86,38 @@
           text-align: left;
         }
       }
+
+      .odometers {
+        display: flex;
+        gap: 4rem;
+        margin-bottom: calc(2 * var(--padding_default));
+
+        @media screen and (max-width: 768px){
+          display: none;
+        }
+
+        .odometer {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          app-odometer {
+            font-size: 4rem;
+            line-height: 130%;
+          }
+
+          i {
+            font-size: 4rem;
+            line-height: 130%;
+            font-style: normal;
+          }
+
+          > span {
+            font-size: 1.55rem;
+            color: #898A93;
+          }
+        }
+      }
     }
 
     .hero__elipse {
